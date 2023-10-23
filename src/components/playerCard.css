@@ -1,0 +1,86 @@
+.card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  height: 25rem;
+  width: 25rem;
+  /* transform: skew(45deg) scaleY(cos(45deg)); */
+  /* border: 1px solid #333; */
+  border-radius: 2rem;
+  background-color: #e5edff;
+  transition: all 0.3s;
+}
+
+.card-container button {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: #717f99;
+}
+
+.card-container:hover {
+  background-color: transparent;
+  border: solid 3px white;
+  box-shadow: 0 0 0 0;
+  overflow: hidden;
+}
+
+.card-container::before,
+.card-container::after {
+  position: absolute;
+  content: "";
+  border-radius: 2.2rem;
+  top: -1.2%;
+  right: -1.2%;
+  height: calc(100% + 0.6rem);
+  width: calc(100% + 0.65rem);
+  background: linear-gradient(
+    -45deg,
+    #8d9dbf,
+    #99accf,
+    #a6bae1,
+    #bdd3ff,
+    #cfdfff,
+    #e5edff,
+    #cfdfff,
+    #bdd3ff,
+    #a6bae1,
+    #99accf,
+    #8d9dbf,
+    #8d9dbf,
+    #8d9dbf,
+    #99accf,
+    #a6bae1,
+    #bdd3ff
+  );
+
+  background-size: 400%;
+  z-index: -1;
+  transition: all 0.3s;
+  animation: cardAnimation 25s linear infinite;
+}
+
+.card-container::before:hover,
+.card-container::after:hover {
+  filter: blur(3rem);
+  -webkit-filter: blur(3rem);
+  transition: all 0.3s;
+}
+
+@keyframes cardAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

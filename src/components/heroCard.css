@@ -1,0 +1,31 @@
+.hero-modal-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 12rem;
+  width: 10rem;
+  text-align: center;
+  border: 2px solid #eee;
+  place-content: center;
+}
+
+.hero-card-container {
+  display: flex;
+}
+
+.hero-card {
+  height: 12rem;
+  width: 10rem;
+}
+
+button {
+  z-index: 3;
+}
+
+.hero-name-banner {
+  text-align: center;
+  height: 2.5rem;
+  width: 10rem;
+  /* font-size: 1.5rem; */
+  background-color: #eee;
+}

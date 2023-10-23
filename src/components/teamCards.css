@@ -1,0 +1,12 @@
+.team-cards-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: auto;
+}
+
+.team-cards-container {
+  display: flex;
+  gap: 3rem;
+}
