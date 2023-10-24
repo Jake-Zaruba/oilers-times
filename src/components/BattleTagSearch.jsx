@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PlayerCard from "./PlayerCard";
+import "./battleTagSearch.css";
 
 export default function BattleTagSearch() {
   const [playerData, setPlayerData] = useState({});
@@ -28,7 +29,7 @@ export default function BattleTagSearch() {
   }
 
   return (
-    <>
+    <div className="battle-tag-search-container">
       <label>BattleTag</label>
       <input value={battleTag} onChange={(e) => setBattleTag(e.target.value)} />
       <label>BattleId</label>
@@ -39,6 +40,6 @@ export default function BattleTagSearch() {
       ) : (
         <PlayerCard player={playerData} />
       )}
-    </>
+    </div>
   );
 }

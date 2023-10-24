@@ -1,0 +1,248 @@
+.home-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: calc(100vh - 4rem);
+  width: 100vw;
+  background: url("../assets/wallpaperflare.com_wallpaper.jpg") no-repeat center
+    fixed;
+  background-size: cover;
+}
+
+.clocktower-flicker-animation {
+  position: fixed;
+  top: 5rem;
+  right: 39vw;
+  content: "";
+  height: 7rem;
+  width: 7rem;
+  background-color: #fed91e;
+  border-radius: 50%;
+  opacity: 50%;
+  filter: blur(2rem);
+  animation: clocktowerFlicker 3s linear infinite forwards;
+}
+
+@keyframes clocktowerFlicker {
+  0% {
+    opacity: 40%;
+  }
+  4% {
+    opacity: 40%;
+  }
+  5% {
+    opacity: 0%;
+  }
+  6% {
+    opacity: 40%;
+  }
+  21% {
+    opacity: 40%;
+  }
+  22% {
+    opacity: 0%;
+  }
+  23% {
+    opacity: 40%;
+  }
+  34% {
+    opacity: 40%;
+  }
+  35% {
+    opacity: 0%;
+  }
+  36% {
+    opacity: 40%;
+  }
+  60% {
+    opacity: 40%;
+  }
+  61% {
+    opacity: 0%;
+  }
+  62% {
+    opacity: 40%;
+  }
+  85% {
+    opacity: 40%;
+  }
+  86% {
+    opacity: 0%;
+  }
+  87% {
+    opacity: 40%;
+  }
+  99% {
+    opacity: 40%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+.building-flicker-animation {
+  position: fixed;
+  top: 5rem;
+  left: 15vw;
+  content: "";
+  height: 25rem;
+  width: 10rem;
+  background-color: #48b2be;
+  border-radius: 2rem;
+  filter: blur(2rem);
+  animation: buildingFlicker 2.5s linear infinite alternate;
+}
+
+@keyframes buildingFlicker {
+  from {
+    opacity: 0%;
+    background-color: #419ea8;
+  }
+  to {
+    opacity: 70%;
+    background-color: #48b2be;
+  }
+}
+
+.ripple-animation-container {
+  position: relative;
+  display: flex;
+  height: 0rem;
+  width: 0rem;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.ripple-animation-drop {
+  position: absolute;
+  bottom: -52rem;
+  left: 30rem;
+  height: 5rem;
+  width: 4rem;
+  border-radius: 100%;
+  border: none;
+  background-color: #eff2f546;
+  /* transform: rotate(deg); */
+  box-shadow: inset 5px 5px 20px #a5a7a939,
+    inset 5px -50px 20prgba (255, 255, 255, 0.467) ff;
+  transition: 0.31s ease-in all;
+  opacity: 0;
+  animation: rippleAnimation 4s infinite;
+  transform: rotate(-20deg);
+}
+
+@keyframes rippleAnimation {
+  0% {
+    width: 10px;
+    height: 10px;
+    opacity: 0.7;
+  }
+  100% {
+    width: 130px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+
+.ripple-animation-container .ripple-animation-drop:nth-child(1) {
+  animation-delay: 500ms;
+}
+
+.ripple-animation-container .ripple-animation-drop:nth-child(2) {
+  animation-delay: 1000ms;
+}
+
+.ripple-animation-container .ripple-animation-drop:nth-child(3) {
+  animation-delay: 1500ms;
+}
+
+.ripple-animation-container .ripple-animation-drop:nth-child(4) {
+  animation-delay: 2000ms;
+}
+
+.ripple-animation-container .ripple-animation-drop:nth-child(5) {
+  animation-delay: 2500ms;
+}
+
+.home-page-links-container {
+  display: flex;
+  flex-direction: column;
+  animation: homePageTransition 0.5s ease-out forwards;
+}
+
+.ripple-animation-container:nth-child(3) {
+  right: -127rem;
+  bottom: -34rem;
+  transform: scale(0.3) rotate(-20deg);
+}
+
+@keyframes homePageTransition {
+  from {
+    opacity: 0%;
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+
+.home-page-link {
+  position: relative;
+  color: white;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-left: 6rem;
+  z-index: 2;
+  transition: all 0.3s;
+  /* -webkit-text-fill-color: white; */
+  /* -webkit-text-stroke: 1px lightsteelblue; */
+}
+
+.home-page-link:hover {
+  transform: translateX(3rem) scale(1.2);
+}
+
+.home-page-link::before {
+  position: absolute;
+  top: 3rem;
+  left: 8rem;
+  content: "";
+  height: 2rem;
+  width: 1rem;
+  border-radius: 15rem;
+  background: linear-gradient(
+    to right,
+    rgb(84, 46, 255),
+    white,
+    rgb(46, 84, 255)
+  );
+  filter: blur(0.7rem);
+  z-index: -1;
+  animation: linkHoverReverse 0.3s linear forwards;
+}
+
+.home-page-link:hover::before {
+  animation: linkHover 0.3s linear forwards;
+}
+
+@keyframes linkHover {
+  from {
+    transform: scaleX(2);
+  }
+  to {
+    transform: scaleX(10);
+  }
+}
+
+@keyframes linkHoverReverse {
+  from {
+    opacity: 100%;
+    transform: scaleX(10);
+  }
+  to {
+    opacity: 50%;
+    transform: scaleX(2);
+  }
+}

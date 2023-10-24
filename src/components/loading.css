@@ -1,0 +1,21 @@
+.loading {
+  position: fixed;
+  top: calc(50vh - 6rem);
+  right: calc(50vw - 4rem);
+  content: "";
+  height: 8rem;
+  width: 8rem;
+  background: conic-gradient(#99accf, #a6bae1, #bdd3ff, #cfdfff, #e5edff);
+  border-radius: 50%;
+  animation: loadingSpinner 0.8s linear infinite;
+  z-index: 10;
+}
+
+@keyframes loadingSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

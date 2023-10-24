@@ -2,8 +2,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh - 14.5rem);
   width: auto;
+  animation: teamCardsPageTransition 0.8s ease-out forwards;
+}
+
+@keyframes teamCardsPageTransition {
+  0% {
+    opacity: 0%;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0%);
+  }
 }
 
 .team-cards-container {

@@ -1,0 +1,14 @@
+/* .battle-tag-search-container {
+  animation: pageTransition 0.8s ease-out forwards;
+}
+
+@keyframes pageTransition {
+  0% {
+    opacity: 0%;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+} */

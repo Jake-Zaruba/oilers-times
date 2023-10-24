@@ -26,7 +26,7 @@
 
 .card-container:hover {
   background-color: transparent;
-  border: solid 3px white;
+  outline: solid 3px white;
   box-shadow: 0 0 0 0;
   overflow: hidden;
 }

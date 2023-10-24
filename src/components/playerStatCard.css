@@ -1,26 +1,29 @@
 .player-stat-card-container {
+  position: fixed;
+  top: calc(50vh - 42rem);
+  left: calc(50vw - 14rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
   border: solid 3px white;
   border-radius: 2rem;
-  height: 48rem;
-  width: 36rem;
+  height: 42rem;
+  width: 28rem;
   background: linear-gradient(to bottom, #e5edff, #bdd3ff);
 }
 
 h1 {
-  font-size: 3.4rem;
+  font-size: 2.6rem;
   text-align: center;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 span {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 p {
@@ -29,12 +32,6 @@ p {
 
 .header {
   text-align: center;
-}
-
-.stat-page-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .stats {

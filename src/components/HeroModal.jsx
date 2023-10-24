@@ -6,6 +6,8 @@ export default function HeroModal({
   battletag,
   heroImage,
 }) {
+  const hoursPlayed = Math.round(heroStats.time_played / 3600);
+
   return (
     <div className="hero-modal">
       <div className="player-stat-card-container">
@@ -35,7 +37,11 @@ export default function HeroModal({
           <span>{heroStats?.total?.eliminations}</span>
         </div>
         <h2 className="time-played">
-          {Math.round(heroStats.time_played / 3600)} hours played
+          <h2 className="time-played">
+            {hoursPlayed === 1
+              ? `${hoursPlayed} hour played`
+              : `${hoursPlayed} hours played`}
+          </h2>
         </h2>
       </div>
     </div>

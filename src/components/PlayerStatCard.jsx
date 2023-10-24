@@ -20,6 +20,8 @@ export default function PlayerStatCard({ playerStats, battletag }) {
     }
   }
 
+  const hoursPlayed = Math.round(playerStats.general.time_played / 3600);
+
   return (
     <div className="player-stat-card-container">
       <div className="header">
@@ -48,7 +50,9 @@ export default function PlayerStatCard({ playerStats, battletag }) {
         <span>{playerStats?.general?.total?.eliminations}</span>
       </div>
       <h2 className="time-played">
-        {Math.round(playerStats.general.time_played / 3600)} hours played
+        {hoursPlayed === 1
+          ? `${hoursPlayed} hour played`
+          : `${hoursPlayed} hours played`}
       </h2>
     </div>
   );

@@ -23,10 +23,10 @@ const JSXRouter = createBrowserRouter(
         <Route element={<PlayerCard />} path=":name" />
       </Route>
 
-      <Route element={<TeamCards />} path="team-cards" loader={playerLoader} />
+      <Route element={<TeamCards />} path="team-stats" loader={playerLoader} />
       <Route
         element={<PlayerStats />}
-        path="/team-cards/:battletag"
+        path="/team-stats/:battletag"
         loader={statLoader}
       />
     </Route>

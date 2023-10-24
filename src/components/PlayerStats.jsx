@@ -3,6 +3,7 @@ import "./playerStats.css";
 import { useState } from "react";
 import HeroCard from "./HeroCard";
 import PlayerStatCard from "./PlayerStatCard";
+import Loading from "./Loading";
 
 export function statLoader() {
   return null;
@@ -176,7 +177,7 @@ export default function PlayerStats() {
               position: "absolute",
               bottom: "0",
               fontSize: "1rem",
-              marginBottom: "2rem",
+              marginBottom: "4rem",
             }}
           >
             {heroSelect}
@@ -190,7 +191,7 @@ export default function PlayerStats() {
   else
     return (
       <>
-        <h1>Loading...</h1>
+        <Loading />
       </>
     );
 }
