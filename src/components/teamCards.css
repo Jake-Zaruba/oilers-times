@@ -2,8 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 14.5rem);
+  height: calc(100vh - 4rem);
   width: auto;
+}
+
+.team-cards-teams-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
   animation: teamCardsPageTransition 0.8s ease-out forwards;
 }
 
@@ -20,5 +26,33 @@
 
 .team-cards-container {
   display: flex;
-  gap: 3rem;
+  gap: 5rem;
+}
+
+.teams-text {
+  text-align: center;
+}
+
+.teams-text-header {
+  font-size: 3rem;
+}
+
+.teams-text-header:first-child {
+  padding-top: 3rem;
+}
+
+.teams-text-header:last-child {
+  padding-bottom: 3rem;
+}
+
+.teams-text-subtext {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.stat-favor-indicator {
+  position: fixed;
+  right: 0rem;
+  height: 15rem;
+  width: 100%;
 }

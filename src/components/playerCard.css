@@ -84,3 +84,22 @@
     background-position: 0 0;
   }
 }
+
+.team-card-line-green {
+  background: linear-gradient(to top, #e5edff, #95cc59, #e5edff);
+}
+
+.team-card-line-red {
+  background: linear-gradient(to bottom, #e5edff, #b71138, #e5edff);
+}
+
+.team-card-line {
+  position: absolute;
+  top: 25rem;
+  left: 50%;
+  content: "";
+  height: 5rem;
+  width: 1rem;
+  /* background-color: #e5edff; */
+  /* z-index: -2; */
+}

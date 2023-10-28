@@ -7,6 +7,7 @@
   background: url("../assets/wallpaperflare.com_wallpaper.jpg") no-repeat center
     fixed;
   background-size: cover;
+  overflow-y: hidden;
 }
 
 .clocktower-flicker-animation {
@@ -119,16 +120,16 @@
   bottom: -52rem;
   left: 30rem;
   height: 5rem;
-  width: 4rem;
+  width: 5rem;
   border-radius: 100%;
   border: none;
-  background-color: #eff2f546;
+  background-color: #55555576;
   /* transform: rotate(deg); */
-  box-shadow: inset 5px 5px 20px #a5a7a939,
+  box-shadow: inset 5px 5px 20px #595a5b5d,
     inset 5px -50px 20prgba (255, 255, 255, 0.467) ff;
   transition: 0.31s ease-in all;
   opacity: 0;
-  animation: rippleAnimation 4s infinite;
+  animation: rippleAnimation 3s infinite;
   transform: rotate(-20deg);
 }
 
@@ -165,16 +166,16 @@
   animation-delay: 2500ms;
 }
 
+/* .ripple-animation-container:nth-child(3) {
+  right: -127rem;
+  bottom: -34rem;
+  transform: scale(0.3) rotate(-20deg);
+} */
+
 .home-page-links-container {
   display: flex;
   flex-direction: column;
   animation: homePageTransition 0.5s ease-out forwards;
-}
-
-.ripple-animation-container:nth-child(3) {
-  right: -127rem;
-  bottom: -34rem;
-  transform: scale(0.3) rotate(-20deg);
 }
 
 @keyframes homePageTransition {
