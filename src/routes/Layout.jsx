@@ -26,6 +26,7 @@ export default function Layout() {
           </NavLink>
           <NavLink to="/player-search">Search</NavLink>
           <NavLink to="/team-stats">Team Stats</NavLink>
+          <NavLink to="/oilers-times">Oilers Times</NavLink>
         </nav>
         {isLoading ? <Loading /> : ""}
       </header>

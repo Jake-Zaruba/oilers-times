@@ -1,0 +1,14 @@
+.prompt-container {
+  position: fixed;
+  top: calc(50% - 10rem);
+  right: calc(50% - 30rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 20rem;
+  width: 60rem;
+  background-color: #e5edff65;
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+}

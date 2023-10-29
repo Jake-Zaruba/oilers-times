@@ -1,0 +1,127 @@
+.oilers-times-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 4rem);
+  width: auto;
+}
+
+.oilters-times-article-container {
+  height: 48rem;
+  width: 84rem;
+  border: 3px solid #e5edff;
+  border-radius: 2rem;
+  /* padding: 1rem; */
+  overflow: scroll;
+}
+
+.oilters-times-article-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10rem;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to bottom, transparent 10%, #e5edff53 90%);
+  border-radius: 1.6rem;
+  margin-bottom: 1rem;
+  /* border-bottom: 2px solid #e5edff64; */
+}
+
+.article-button {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 1.2rem;
+  padding: 1rem;
+  transition: all 0.1s linear;
+}
+
+.article-button:hover {
+  color: white;
+  background-color: #333;
+}
+
+.oilers-times-form {
+  font: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title-input,
+.body-input,
+.map-select {
+  font-family: "Raleway", sans-serif;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.title-input {
+  font-size: 2.4rem;
+  margin-bottom: 4rem;
+}
+
+.body-input {
+  font-size: 1.6rem;
+  border: none;
+  height: 40vh;
+  width: 60vw;
+  margin-bottom: 4rem;
+}
+
+/* .select-label {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+} */
+
+.map-select {
+  margin-bottom: 8rem;
+}
+
+.form-button {
+  border: none;
+  background-color: #e5edff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.article-background-gradient {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, transparent 20%, black 80%);
+}
+
+.article-page-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3.2rem;
+  color: white;
+  margin-top: 10rem;
+}
+
+.article-page-body {
+  font-size: 1.6rem;
+  color: white;
+  padding: 4rem 20rem;
+}
+
+.article-page-body::first-letter {
+  initial-letter: 3;
+  margin-right: 0.75rem;
+}

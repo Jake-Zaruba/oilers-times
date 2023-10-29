@@ -9,8 +9,17 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import PlayerCard from "./components/PlayerCard.jsx";
+import PlayerCard from "./components/PlayerCard";
 import PlayerSearch from "./routes/PlayerSearch";
+import OilersTimes, {
+  articleLoader,
+} from "./components/oilersTimes/OilersTimes";
+import OilersTimesAuthorPage, {
+  mapLoader,
+} from "./components/oilersTimes/OilersTimesAuthorPage";
+import OilersTimesArticlePage, {
+  articlePageLoader,
+} from "./components/oilersTimes/OilersTimesArticlePage";
 import TeamCards, { playerLoader } from "./components/TeamCards";
 import PlayerStats, { statLoader } from "./components/PlayerStats";
 import Home from "./components/Home";
@@ -28,6 +37,22 @@ const JSXRouter = createBrowserRouter(
         element={<PlayerStats />}
         path="/team-stats/:battletag"
         loader={statLoader}
+      />
+      <Route
+        element={<OilersTimes />}
+        path="oilers-times"
+        loader={articleLoader}
+      ></Route>
+      <Route
+        element={<OilersTimesArticlePage />}
+        path=":pageID"
+        loader={articlePageLoader}
+      />
+
+      <Route
+        element={<OilersTimesAuthorPage />}
+        path="oilers-times/new-article"
+        loader={mapLoader}
       />
     </Route>
   )

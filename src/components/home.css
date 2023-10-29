@@ -117,15 +117,15 @@
 
 .ripple-animation-drop {
   position: absolute;
-  bottom: -52rem;
-  left: 30rem;
+  bottom: -53rem;
+  left: 18rem;
   height: 5rem;
   width: 5rem;
   border-radius: 100%;
   border: none;
-  background-color: #55555576;
+  background-color: #2a2a2a85;
   /* transform: rotate(deg); */
-  box-shadow: inset 5px 5px 20px #595a5b5d,
+  box-shadow: inset 5px 5px 20px #34353677,
     inset 5px -50px 20prgba (255, 255, 255, 0.467) ff;
   transition: 0.31s ease-in all;
   opacity: 0;
@@ -135,12 +135,12 @@
 
 @keyframes rippleAnimation {
   0% {
-    width: 10px;
+    width: 15px;
     height: 10px;
     opacity: 0.7;
   }
   100% {
-    width: 130px;
+    width: 150px;
     height: 100px;
     opacity: 0;
   }
@@ -194,6 +194,7 @@
   color: white;
   font-size: 5rem;
   font-weight: 700;
+  font-style: italic;
   margin-left: 6rem;
   z-index: 2;
   transition: all 0.3s;
@@ -219,7 +220,7 @@
     white,
     rgb(46, 84, 255)
   );
-  filter: blur(0.7rem);
+  filter: blur(0.5rem);
   z-index: -1;
   animation: linkHoverReverse 0.3s linear forwards;
 }
@@ -243,7 +244,7 @@
     transform: scaleX(10);
   }
   to {
-    opacity: 50%;
+    opacity: 70%;
     transform: scaleX(2);
   }
 }

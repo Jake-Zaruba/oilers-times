@@ -23,6 +23,9 @@ export default function Home() {
           <NavLink className="home-page-link" to="player-search">
             SEARCH
           </NavLink>
+          <NavLink className="home-page-link" to="oilers-times">
+            OILERS TIMES
+          </NavLink>
         </div>
       </div>
     </>
