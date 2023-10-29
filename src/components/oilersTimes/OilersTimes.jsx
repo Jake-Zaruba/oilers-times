@@ -28,7 +28,15 @@ export default function OilersTimes() {
 
   return (
     <div className="oilers-times-page-container">
-      <OilersTimesArticleContainer>{articles}</OilersTimesArticleContainer>
+      <OilersTimesArticleContainer>
+        {articles.length > 0 ? (
+          articles
+        ) : (
+          <h2 style={{ textAlign: "center", padding: "2rem" }}>
+            No articles to display
+          </h2>
+        )}
+      </OilersTimesArticleContainer>
       <Link
         style={{ marginTop: "2rem" }}
         className="article-button"

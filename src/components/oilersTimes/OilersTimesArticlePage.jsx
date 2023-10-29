@@ -40,7 +40,7 @@ export default function oilersTimesArticlePage() {
         background: `url(${imageUrl}) no-repeat center
         fixed`,
         backgroundSize: "cover",
-        height: "calc(100vh - 4rem",
+        height: "100vh",
         width: "100vw",
       }}
     >

@@ -11,14 +11,22 @@ export default function Prompt({
       <div style={{ display: "flex", gap: "3rem" }}>
         <button
           onClick={() => handleFalseAnswer()}
-          style={{ backgroundColor: "#b7113864" }}
+          style={{
+            backgroundColor: "rgba(183, 17, 56, 0.5)",
+            width: "8rem",
+            color: "#333",
+          }}
           className="article-button"
         >
           Cancel
         </button>
         <button
-          onClick={handleTrueAnswer}
-          style={{ backgroundColor: "#94cc595c" }}
+          onClick={() => handleTrueAnswer()}
+          style={{
+            backgroundColor: "rgba(148, 204, 89, 0.5)",
+            width: "8rem",
+            color: "#333",
+          }}
           className="article-button"
         >
           Yes

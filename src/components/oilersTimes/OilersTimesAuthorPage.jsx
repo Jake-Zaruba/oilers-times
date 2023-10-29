@@ -48,7 +48,7 @@ export default function oilersTimesAuthorPage() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "calc(100vh - 4rem)",
+        height: "100vh",
         width: "100vw",
       }}
     >

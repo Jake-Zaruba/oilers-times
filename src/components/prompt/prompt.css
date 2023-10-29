@@ -8,7 +8,8 @@
   justify-content: space-evenly;
   height: 20rem;
   width: 60rem;
-  background-color: #e5edff65;
+  background-color: #e5edff;
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.5rem);
+  z-index: 100;
 }

@@ -3,8 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 4rem);
-  width: auto;
+  height: 100vh;
+  width: 100vw;
 }
 
 .oilters-times-article-container {
@@ -15,6 +15,7 @@
   /* padding: 1rem; */
   overflow: scroll;
   animation: articleAnimation 0.8s ease-out forwards;
+  z-index: 1;
 }
 
 @keyframes articleAnimation {
@@ -77,6 +78,7 @@
 .title-input {
   font-size: 2.4rem;
   margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 
 .body-input {
@@ -113,9 +115,9 @@
   align-self: flex-end;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: 80vh;
   width: 100vw;
-  background: linear-gradient(to bottom, transparent 20%, black 80%);
+  background: linear-gradient(to bottom, transparent 10%, black 90%);
 }
 
 .article-page-title {
@@ -124,7 +126,7 @@
   align-items: center;
   font-size: 3.2rem;
   color: white;
-  margin-top: 10rem;
+  margin-top: 30rem;
 }
 
 .article-page-body {

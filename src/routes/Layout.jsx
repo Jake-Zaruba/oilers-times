@@ -8,7 +8,13 @@ export default function Layout() {
     <>
       <header
         style={{
-          backgroundColor: "#333",
+          position: "fixed",
+          top: "0",
+          left: "0",
+          right: "0",
+          backgroundColor: "rgba(51, 51, 51, 0.467)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

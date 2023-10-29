@@ -9,8 +9,14 @@ export default function OilersTimesArticleItem({ data, id }) {
   const navigate = useNavigate();
   const [showPrompt, setShowPrompt] = useState(false);
   const [promptAnswer, setPromptAnswer] = useState(false);
+  const [deleteArticleID, setDeleteArticleID] = useState("");
 
   const handleTrueAnswer = () => {
+    const articleDoc = doc(db, "articles", deleteArticleID);
+    setPromptAnswer((prev) => !prev);
+    console.log(promptAnswer);
+    deleteDoc(articleDoc);
+    navigate("/oilers-times");
     setPromptAnswer((prev) => !prev);
     setShowPrompt((prev) => !prev);
   };
@@ -20,25 +26,11 @@ export default function OilersTimesArticleItem({ data, id }) {
     setShowPrompt((prev) => !prev);
   };
 
-  const handleDeleteArticle = async (deleteID) => {
+  const handleDeleteArticle = (deleteID) => {
+    setDeleteArticleID(deleteID);
     const articleDoc = doc(db, "articles", id);
     if (deleteID === id) {
       setShowPrompt((prev) => !prev);
-      if (showPrompt === true) {
-      }
-      if (promptAnswer === true) {
-        console.log(promptAnswer);
-        deleteDoc(articleDoc);
-        navigate("/oilers-times");
-        setPromptAnswer((prev) => !prev);
-      } else {
-        setPromptAnswer(false);
-        navigate("/oilers-times");
-      }
-    } else {
-      setPromptAnswer(false);
-      setShowPrompt((prev) => !prev);
-      navigate("/oilers-times");
     }
   };
 
