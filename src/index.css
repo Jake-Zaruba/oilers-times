@@ -61,3 +61,15 @@ nav {
   padding: 1rem;
   font-size: 1.8rem;
 }
+
+.logout {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0rem 1rem !important;
+  background-color: transparent;
+  border: none;
+  color: #eee;
+  font-size: 1.6rem;
+  font-weight: 500;
+}

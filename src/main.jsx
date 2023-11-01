@@ -23,34 +23,84 @@ import OilersTimesArticlePage, {
 import TeamCards, { playerLoader } from "./components/TeamCards";
 import PlayerStats, { statLoader } from "./components/PlayerStats";
 import Home from "./components/Home";
+import Login from "./routes/Login";
+import Register from "./routes/Register";
+import { AuthContext } from "./context/AuthContext";
+import { ProtectedRoute } from "./routes/ProtectedRoute";
 
 const JSXRouter = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<Layout />} path="/" errorElement={<Error />}>
-      <Route index element={<Home />} />
-      <Route element={<PlayerSearch />} path="player-search">
-        <Route element={<PlayerCard />} path=":name" />
-      </Route>
-
-      <Route element={<TeamCards />} path="team-stats" loader={playerLoader} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
       <Route
-        element={<PlayerStats />}
+        index
+        element={
+          <ProtectedRoute>
+            <Home />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        element={
+          <ProtectedRoute>
+            <PlayerSearch />
+          </ProtectedRoute>
+        }
+        path="player-search"
+      >
+        <Route
+          element={
+            <ProtectedRoute>
+              <PlayerCard />
+            </ProtectedRoute>
+          }
+          path=":name"
+        />
+      </Route>
+      <Route
+        element={
+          <ProtectedRoute>
+            <TeamCards />
+          </ProtectedRoute>
+        }
+        path="team-stats"
+        loader={playerLoader}
+      />
+      <Route
+        element={
+          <ProtectedRoute>
+            <PlayerStats />
+          </ProtectedRoute>
+        }
         path="/team-stats/:battletag"
         loader={statLoader}
       />
       <Route
-        element={<OilersTimes />}
+        element={
+          <ProtectedRoute>
+            <OilersTimes />
+          </ProtectedRoute>
+        }
         path="oilers-times"
         loader={articleLoader}
       ></Route>
       <Route
-        element={<OilersTimesArticlePage />}
+        element={
+          <ProtectedRoute>
+            <OilersTimesArticlePage />
+          </ProtectedRoute>
+        }
         path=":pageID"
         loader={articlePageLoader}
       />
 
       <Route
-        element={<OilersTimesAuthorPage />}
+        element={
+          <ProtectedRoute>
+            <OilersTimesAuthorPage />
+          </ProtectedRoute>
+        }
         path="oilers-times/new-article"
         loader={mapLoader}
       />
@@ -59,6 +109,8 @@ const JSXRouter = createBrowserRouter(
 );
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={JSXRouter} />
+    <AuthContext>
+      <RouterProvider router={JSXRouter} />
+    </AuthContext>
   </React.StrictMode>
 );

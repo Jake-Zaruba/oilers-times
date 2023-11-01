@@ -87,6 +87,7 @@
   height: 40vh;
   width: 60vw;
   margin-bottom: 4rem;
+  white-space: pre-wrap;
 }
 
 /* .select-label {
@@ -133,6 +134,7 @@
   font-size: 1.6rem;
   color: white;
   padding: 4rem 20rem;
+  white-space: pre-wrap;
 }
 
 .article-page-body::first-letter {
