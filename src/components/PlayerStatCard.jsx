@@ -1,4 +1,4 @@
-import "./playerStatcard.css";
+import "./playerStatCard.css";
 
 export default function PlayerStatCard({ playerStats, battletag }) {
   let playerImage = "";
