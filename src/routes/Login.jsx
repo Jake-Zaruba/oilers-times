@@ -61,10 +61,10 @@ export default function Login() {
             {!showPassword ? (
               <img
                 className="password-icon"
-                src="../src/assets/show-password.svg"
+                src="../public/show-password.svg"
               />
             ) : (
-              <img src="../src/assets/hide-password.svg" />
+              <img src="../public/hide-password.svg" />
             )}
           </button>
         </div>
