@@ -1,12 +1,15 @@
 /* /////LOGIN///// */
+@media (min-width: 100em) {
+  /* *****1600px***** */
+  .oilers-times-header {
+    font-size: 5rem !important;
+  }
+}
 
 @media (max-width: 100em) {
   /* *****1600px***** */
-  .home-page-container {
-    /* background-position: -175rem; */
-  }
   .oilers-times-header {
-    font-size: 5rem;
+    font-size: 4.2rem !important;
   }
   .disabled-homepage-button,
   .mobile-logout {
@@ -19,7 +22,7 @@
 @media (max-width: 84em) {
   /* *****1344px***** */
   .oilers-times-header {
-    font-size: 4.6rem;
+    font-size: 4.2rem !important;
   }
 }
 
@@ -29,41 +32,8 @@
     font-size: 56.25%;
   }
   .login-container {
-    height: 58vh;
-    width: 50vw;
-  }
-}
-
-@media (max-width: 34em) {
-  /* *****544px***** */
-  html {
-    font-size: 50%;
-  }
-  .oilers-times-header {
-    font-size: 4rem;
-  }
-  .login-input {
-    width: 22rem;
-  }
-  .oilers-times-header {
-    top: 30rem;
-  }
-}
-
-/* /////HOMEPAGE///// */
-
-@media (max-width: 100em) {
-  /* *****1600px***** */
-}
-
-@media (max-width: 84em) {
-  /* *****1344px***** */
-}
-
-@media (max-width: 75em) {
-  /* *****1200px***** */
-  html {
-    font-size: 56.25%;
+    height: 58vh !important;
+    width: 50vw !important;
   }
   .home-page-container {
     background: url("/wallpaperflare.com_wallpaper.jpg") no-repeat right fixed;
@@ -74,6 +44,21 @@
   /* *****544px***** */
   html {
     font-size: 50%;
+  }
+  .login-page-container {
+    height: 100%;
+    width: 100%;
+  }
+  .login-container {
+    height: 95vh !important;
+    width: 95vw !important;
+  }
+  .oilers-times-header {
+    font-size: 5rem !important;
+    top: 12rem !important;
+  }
+  .login-input {
+    width: 22rem !important;
   }
   .home-page-container {
     background-position: -175rem;
@@ -243,8 +228,4 @@
       transform: translatex(0rem) translateY(0rem) rotate(0deg);
     }
   }
-  /* .home-page-links-container {
-    background: radial-gradient(#333333, transparent);
-    border-radius: 50%;
-  } */
 }
