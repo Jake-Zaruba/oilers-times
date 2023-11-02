@@ -4,8 +4,8 @@
   justify-content: flex-start;
   height: 100vh;
   width: 100vw;
-  background: url("/dist/assets/wallpaperflare.com_wallpaper-da73c8d0.jpg")
-    no-repeat center fixed;
+  background: url("../public/wallpaperflare.com_wallpaper.jpg") no-repeat center
+    fixed;
   background-size: cover;
   overflow-y: hidden;
 }
