@@ -37,118 +37,118 @@ export default function PlayerStats() {
       console.log(hero);
       switch (hero[0]) {
         case "ana":
-          heroImgUrl = "/dist/ana.webp";
+          heroImgUrl = "/dist/assets/ana.webp";
           break;
         case "ashe":
-          heroImgUrl = "/dist/ashe.webp";
+          heroImgUrl = "/dist/assets/ashe.webp";
           break;
         case "baptiste":
-          heroImgUrl = "/dist/baptiste.webp";
+          heroImgUrl = "/dist/assets/baptiste.webp";
           break;
         case "bastion":
-          heroImgUrl = "/dist/bastion.webp";
+          heroImgUrl = "/dist/assets/bastion.webp";
           break;
         case "brigitte":
-          heroImgUrl = "/dist/brigitte.webp";
+          heroImgUrl = "/dist/assets/brigitte.webp";
           break;
         case "cassidy":
-          heroImgUrl = "/dist/cassidy.webp";
+          heroImgUrl = "/dist/assets/cassidy.webp";
           break;
         case "doomfist":
-          heroImgUrl = "/dist/doomfist.webp";
+          heroImgUrl = "/dist/assets/doomfist.webp";
           break;
         case "dva":
-          heroImgUrl = "/dist/dva.webp";
+          heroImgUrl = "/dist/assets/dva.webp";
           break;
         case "echo":
-          heroImgUrl = "/dist/echo.webp";
+          heroImgUrl = "/dist/assets/echo.webp";
           break;
         case "genji":
-          heroImgUrl = "/dist/genji.webp";
+          heroImgUrl = "/dist/assets/genji.webp";
           break;
         case "hanzo":
-          heroImgUrl = "/dist/hanzo.webp";
+          heroImgUrl = "/dist/assets/hanzo.webp";
           break;
         case "illari":
-          heroImgUrl = "/dist/illari.webp";
+          heroImgUrl = "/dist/assets/illari.webp";
           break;
         case "junker-queen":
-          heroImgUrl = "/dist/junker-queen.webp";
+          heroImgUrl = "/dist/assets/junker-queen.webp";
           break;
         case "junkrat":
-          heroImgUrl = "/dist/junkrat.webp";
+          heroImgUrl = "/dist/assets/junkrat.webp";
           break;
         case "kiriko":
-          heroImgUrl = "/dist/kiriko.webp";
+          heroImgUrl = "/dist/assets/kiriko.webp";
           break;
         case "lifeweaver":
-          heroImgUrl = "/dist/lifeweaver.webp";
+          heroImgUrl = "/dist/assets/lifeweaver.webp";
           break;
         case "lucio":
-          heroImgUrl = "/dist/lucio.webp";
+          heroImgUrl = "/dist/assets/lucio.webp";
           break;
         case "mei":
-          heroImgUrl = "/dist/mei.webp";
+          heroImgUrl = "/dist/assets/mei.webp";
           break;
         case "mercy":
-          heroImgUrl = "/dist/mercy.webp";
+          heroImgUrl = "/dist/assets/mercy.webp";
           break;
         case "moira":
-          heroImgUrl = "/dist/moira.webp";
+          heroImgUrl = "/dist/assets/moira.webp";
           break;
         case "orisa":
-          heroImgUrl = "/dist/orisa.webp";
+          heroImgUrl = "/dist/assets/orisa.webp";
           break;
         case "pharah":
-          heroImgUrl = "/dist/pharah.webp";
+          heroImgUrl = "/dist/assets/pharah.webp";
           break;
         case "ramattra":
-          heroImgUrl = "/dist/ramattra.webp";
+          heroImgUrl = "/dist/assets/ramattra.webp";
           break;
         case "reaper":
-          heroImgUrl = "/dist/reaper.webp";
+          heroImgUrl = "/dist/assets/reaper.webp";
           break;
         case "reinhardt":
-          heroImgUrl = "/dist/reinhardt.webp";
+          heroImgUrl = "/dist/assets/reinhardt.webp";
           break;
         case "roadhog":
-          heroImgUrl = "/dist/roadhog.webp";
+          heroImgUrl = "/dist/assets/roadhog.webp";
           break;
         case "sigma":
-          heroImgUrl = "/dist/sigma.webp";
+          heroImgUrl = "/dist/assets/sigma.webp";
           break;
         case "sojourn":
-          heroImgUrl = "/dist/sojourn.webp";
+          heroImgUrl = "/dist/assets/sojourn.webp";
           break;
         case "soldier-76":
-          heroImgUrl = "/dist/soldier-76.webp";
+          heroImgUrl = "/dist/assets/soldier-76.webp";
           break;
         case "sombra":
-          heroImgUrl = "/dist/sombra.webp";
+          heroImgUrl = "/dist/assets/sombra.webp";
           break;
         case "symmetra":
-          heroImgUrl = "/dist/symmetra.webp";
+          heroImgUrl = "/dist/assets/symmetra.webp";
           break;
         case "torbjorn":
-          heroImgUrl = "/dist/torbjorn.webp";
+          heroImgUrl = "/dist/assets/torbjorn.webp";
           break;
         case "tracer":
-          heroImgUrl = "/dist/tracer.webp";
+          heroImgUrl = "/dist/assets/tracer.webp";
           break;
         case "widowmaker":
-          heroImgUrl = "/dist/widowmaker.webp";
+          heroImgUrl = "/dist/assets/widowmaker.webp";
           break;
         case "winston":
-          heroImgUrl = "/dist/winston.webp";
+          heroImgUrl = "/dist/assets/winston.webp";
           break;
         case "wrecking-ball":
-          heroImgUrl = "/dist/wrecking-ball.webp";
+          heroImgUrl = "/dist/assets/wrecking-ball.webp";
           break;
         case "zarya":
-          heroImgUrl = "/dist/zarya.webp";
+          heroImgUrl = "/dist/assets/zarya.webp";
           break;
         case "zenyatta":
-          heroImgUrl = "/dist/zenyatta.webp";
+          heroImgUrl = "/dist/assets/zenyatta.webp";
           break;
       }
       return (
