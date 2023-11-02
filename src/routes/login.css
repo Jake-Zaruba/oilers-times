@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: 55vh;
   width: 30vw;
   /* background: url("../assets/IMG_5535.jpg") no-repeat bottom fixed; */
@@ -21,9 +21,6 @@
 }
 
 .oilers-times-header {
-  position: absolute;
-  top: 28rem;
-  right: calc(50% - 22rem);
   font-family: UnifrakturMaguntia, cursive;
   font-size: 6rem;
   width: 44rem;
@@ -60,7 +57,7 @@
 
 .password-toggle-button {
   position: absolute;
-  bottom: 0rem;
+  bottom: 0.2rem;
   right: 1rem;
   height: 3rem;
   width: 3rem;
@@ -69,7 +66,5 @@
 }
 
 .toggle-register-login-page {
-  position: fixed;
-  bottom: 25rem;
   font-size: 1.4rem;
 }

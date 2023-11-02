@@ -27,9 +27,6 @@
 
 @media (max-width: 84em) {
   /* *****1344px***** */
-  .oilers-times-header {
-    font-size: 4.2rem !important;
-  }
 }
 
 @media (max-width: 75em) {
@@ -59,9 +56,12 @@
     height: 95vh !important;
     width: 95vw !important;
   }
+  .password-toggle-button {
+    bottom: 0.35rem !important;
+  }
+
   .oilers-times-header {
-    font-size: 5rem !important;
-    top: 12rem !important;
+    font-size: 5.6rem !important;
   }
   .login-input {
     font-size: 2rem !important;
