@@ -42,7 +42,10 @@ export default function Layout() {
             </div>
           </div>
 
-          <nav className={!menuOpen ? "closed-menu" : ""}>
+          <nav
+            className={!menuOpen ? "closed-menu" : ""}
+            onClick={() => setMenuOpen((prev) => !prev)}
+          >
             <NavLink
               className={({ isActive }) => {
                 isActive ? "active" : "";
