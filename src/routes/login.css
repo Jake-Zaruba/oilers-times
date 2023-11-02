@@ -12,12 +12,21 @@
   align-items: center;
   justify-content: center;
   height: 55vh;
-  width: 28vw;
+  width: 30vw;
   /* background: url("../assets/IMG_5535.jpg") no-repeat bottom fixed; */
   /* background-size: 30%; */
   /* overflow-y: hidden; */
   background-color: #e5edff;
   border-radius: 1.2rem;
+}
+
+.oilers-times-header {
+  position: absolute;
+  top: 28rem;
+  right: calc(50% - 22rem);
+  font-family: UnifrakturMaguntia, cursive;
+  font-size: 6rem;
+  width: 44rem;
 }
 
 .field-container {
@@ -35,11 +44,12 @@
 
 .login-input {
   font-size: 1.6rem;
+  width: 25rem;
   border: none;
   background-color: white;
   border-radius: 1.2rem;
   box-shadow: 0px 1px 3px #999eaa;
-  padding: 0.6rem;
+  padding: 0.8rem;
 }
 
 .password-icon {

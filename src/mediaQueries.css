@@ -1,0 +1,250 @@
+/* /////LOGIN///// */
+
+@media (max-width: 100em) {
+  /* *****1600px***** */
+  .home-page-container {
+    /* background-position: -175rem; */
+  }
+  .oilers-times-header {
+    font-size: 5rem;
+  }
+  .disabled-homepage-button,
+  .mobile-logout {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 84em) {
+  /* *****1344px***** */
+  .oilers-times-header {
+    font-size: 4.6rem;
+  }
+}
+
+@media (max-width: 75em) {
+  /* *****1200px***** */
+  html {
+    font-size: 56.25%;
+  }
+  .login-container {
+    height: 58vh;
+    width: 50vw;
+  }
+}
+
+@media (max-width: 34em) {
+  /* *****544px***** */
+  html {
+    font-size: 50%;
+  }
+  .oilers-times-header {
+    font-size: 4rem;
+  }
+  .login-input {
+    width: 22rem;
+  }
+  .oilers-times-header {
+    top: 30rem;
+  }
+}
+
+/* /////HOMEPAGE///// */
+
+@media (max-width: 100em) {
+  /* *****1600px***** */
+}
+
+@media (max-width: 84em) {
+  /* *****1344px***** */
+}
+
+@media (max-width: 75em) {
+  /* *****1200px***** */
+  html {
+    font-size: 56.25%;
+  }
+  .home-page-container {
+    background: url("/wallpaperflare.com_wallpaper.jpg") no-repeat right fixed;
+  }
+}
+
+@media (max-width: 34em) {
+  /* *****544px***** */
+  html {
+    font-size: 50%;
+  }
+  .home-page-container {
+    background-position: -175rem;
+  }
+  .clocktower-flicker-animation,
+  .building-flicker-animation,
+  .ripple-animation-container {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    background-color: transparent;
+    backdrop-filter: none;
+    height: 100vh;
+    width: 100vw;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 3.6rem;
+    position: absolute;
+    top: 30rem;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.3s;
+  }
+  .logout {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .open-menu {
+    backdrop-filter: blur(10px);
+    /* height: 100vh;
+    width: 100vw; */
+  }
+  .closed-menu {
+    opacity: 0%;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .menu-button {
+    height: 4rem;
+    width: 4rem;
+    margin-top: 2rem;
+    align-self: flex-start;
+    z-index: 1;
+  }
+  .disabled-homepage-links {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .disabled-homepage-button {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .mobile-logout {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: block;
+    visibility: visible;
+    pointer-events: all;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 1.2rem;
+    padding: 1rem;
+    transition: all 0.1s linear;
+  }
+
+  .mobile-nav-wrapper {
+    position: absolute;
+    top: 0rem;
+    left: 2rem;
+    background-color: #333;
+    border-radius: 8px;
+    z-index: 300;
+  }
+
+  .btn-mobile-nav {
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    background-color: #333;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  .top-nav-line,
+  .bottom-nav-line {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 0.3rem;
+    width: 2.4rem;
+    border-radius: 0.5rem;
+  }
+
+  .top-nav-line {
+    top: 1.35rem;
+    left: 0.78rem;
+    transition: all 0.3s;
+  }
+
+  .bottom-nav-line {
+    top: 2.35rem;
+    left: 0.78rem;
+    transition: all 0.3s;
+  }
+
+  .top-nav-line-animation {
+    animation: top-nav-line 0.3s ease-out forwards;
+  }
+
+  .bottom-nav-line-animation {
+    animation: bottom-nav-line 0.3s ease-out forwards;
+  }
+
+  .close-top-nav-line-animation {
+    animation: close-top-nav-line 0.3s ease-out forwards;
+  }
+
+  .close-bottom-nav-line-animation {
+    animation: close-bottom-nav-line 0.3s ease-out forwards;
+  }
+
+  @keyframes top-nav-line {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: translatex(0.1rem) translateY(0.5rem) rotate(45deg);
+    }
+  }
+
+  @keyframes bottom-nav-line {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: translatex(0.1rem) translateY(-0.5rem) rotate(-45deg);
+    }
+  }
+
+  @keyframes close-top-nav-line {
+    0% {
+      transform: translatex(0.1rem) translateY(0.5rem) rotate(45deg);
+    }
+    100% {
+      transform: translatex(0rem) translateY(0rem) rotate(0deg);
+    }
+  }
+
+  @keyframes close-bottom-nav-line {
+    0% {
+      transform: translatex(0.1rem) translateY(-0.5rem) rotate(-45deg);
+    }
+    100% {
+      transform: translatex(0rem) translateY(0rem) rotate(0deg);
+    }
+  }
+  /* .home-page-links-container {
+    background: radial-gradient(#333333, transparent);
+    border-radius: 50%;
+  } */
+}

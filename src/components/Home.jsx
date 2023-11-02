@@ -1,8 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useOutletContext } from "react-router-dom";
 import "./home.css";
-import Loading from "./Loading";
+import "../mediaQueries.css";
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useOutletContext();
+
   return (
     <>
       <div className="home-page-container">
@@ -16,7 +18,11 @@ export default function Home() {
           <div className="ripple-animation-drop"></div>
           <div className="ripple-animation-drop"></div>
         </div>
-        <div className="home-page-links-container">
+        <div
+          className={
+            !menuOpen ? "home-page-links-container" : "disabled-homepage-links"
+          }
+        >
           <NavLink className="home-page-link" to="team-stats">
             TEAM STATS
           </NavLink>

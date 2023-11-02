@@ -73,3 +73,21 @@ nav {
   font-size: 1.6rem;
   font-weight: 500;
 }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(51, 51, 51, 0.467);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+}
+
+nav {
+  display: flex;
+  gap: 5rem;
+}

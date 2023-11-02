@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-// import "../assets/show-password.svg";
+import "../mediaQueries.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -20,18 +20,7 @@ export default function Login() {
   return (
     <div className="login-page-container">
       <div className="login-container">
-        <h1
-          style={{
-            position: "absolute",
-            top: "28rem",
-            right: "calc(50% - 22rem)",
-            fontFamily: "UnifrakturMaguntia, cursive",
-            fontSize: "6rem",
-            width: "44rem",
-          }}
-        >
-          The Oilers Times
-        </h1>
+        <h1 className="oilers-times-header">The Oilers Times</h1>
         <div className="field-container">
           <label style={{ fontSize: "1.2rem", marginLeft: "0.6rem" }}>
             Email
@@ -52,7 +41,7 @@ export default function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type={!showPassword ? "password" : "text"}
-            autoComplete="off"
+            autoComplete="new-password"
           ></input>
           <button
             className="password-toggle-button"

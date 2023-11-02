@@ -7,6 +7,7 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const auth = getAuth();
 
@@ -19,18 +20,7 @@ export default function Register() {
   return (
     <div className="login-page-container">
       <div className="login-container">
-        <h1
-          style={{
-            position: "absolute",
-            top: "28rem",
-            right: "calc(50% - 22rem)",
-            fontFamily: "UnifrakturMaguntia, cursive",
-            fontSize: "6rem",
-            width: "44rem",
-          }}
-        >
-          The Oilers Times
-        </h1>
+        <h1 className="oilers-times-header">The Oilers Times</h1>
         <div className="field-container">
           <label style={{ fontSize: "1.2rem", marginLeft: "0.6rem" }}>
             Email
@@ -47,12 +37,22 @@ export default function Register() {
             Password
           </label>
           <input
-            className="login-input"
+            className="login-input password-input"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            type="password"
-            autoComplete="off"
-          />
+            type={!showPassword ? "password" : "text"}
+            autoComplete="new-password"
+          ></input>
+          <button
+            className="password-toggle-button"
+            onClick={() => setShowPassword((prev) => !prev)}
+          >
+            {!showPassword ? (
+              <img className="password-icon" src="/show-password.svg" />
+            ) : (
+              <img src="/hide-password.svg" />
+            )}
+          </button>
         </div>
         <div
           style={{

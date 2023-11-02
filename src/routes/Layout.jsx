@@ -1,12 +1,13 @@
 import { Outlet, Link, NavLink, useNavigation } from "react-router-dom";
 import Loading from "../components/Loading";
 import { signOut, getAuth } from "firebase/auth";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Context } from "../context/AuthContext";
 
 export default function Layout() {
   const navigation = useNavigation();
   const isLoading = navigation.state === "loading";
+  const [menuOpen, setMenuOpen] = useState(false);
   const auth = getAuth();
   const { user } = useContext(Context);
 
@@ -17,22 +18,31 @@ export default function Layout() {
   return (
     <div>
       {!user ? null : (
-        <header
-          style={{
-            position: "fixed",
-            top: "0",
-            left: "0",
-            right: "0",
-            backgroundColor: "rgba(51, 51, 51, 0.467)",
-            backdropFilter: "blur(10px)",
-            WebkitBackdropFilter: "blur(10px)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "4rem",
-          }}
-        >
-          <nav style={{ display: "flex", gap: "5rem" }}>
+        <header className={!menuOpen ? "" : "open-menu"}>
+          <div
+            className="menu-button mobile-nav-wrapper"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            role="navigation"
+          >
+            <div className="btn-mobile-nav">
+              <div
+                className={
+                  !menuOpen
+                    ? "close-top-nav-line-animation top-nav-line"
+                    : "top-nav-line-animation top-nav-line"
+                }
+              ></div>
+              <div
+                className={
+                  !menuOpen
+                    ? "close-bottom-nav-line-animation bottom-nav-line"
+                    : "bottom-nav-line-animation bottom-nav-line"
+                }
+              ></div>
+            </div>
+          </div>
+
+          <nav className={!menuOpen ? "closed-menu" : "open-menu"}>
             <NavLink
               className={({ isActive }) => {
                 isActive ? "active" : "";
@@ -44,14 +54,24 @@ export default function Layout() {
             <NavLink to="/player-search">Search</NavLink>
             <NavLink to="/team-stats">Team Stats</NavLink>
             <NavLink to="/oilers-times">Oilers Times</NavLink>
-            <button className="logout" onClick={() => handleSignout()}>
-              Sign out
-            </button>
           </nav>
+          <button className="logout" onClick={() => handleSignout()}>
+            Sign out
+          </button>
+          <button
+            className={
+              !menuOpen
+                ? "disabled-homepage-links disabled-homepage-button"
+                : "mobile-logout "
+            }
+            onClick={() => handleSignout()}
+          >
+            Sign out
+          </button>
           {isLoading ? <Loading /> : ""}
         </header>
       )}
-      <Outlet />
+      <Outlet context={[menuOpen, setMenuOpen]} />
     </div>
   );
 }
