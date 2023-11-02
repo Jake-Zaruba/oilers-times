@@ -31,7 +31,7 @@ import { ProtectedRoute } from "./routes/ProtectedRoute";
 const JSXRouter = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<Layout />} path="/" errorElement={<Error />}>
-      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route
         index
