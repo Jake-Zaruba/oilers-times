@@ -4,6 +4,12 @@
   .oilers-times-header {
     font-size: 5rem !important;
   }
+  .disabled-homepage-button,
+  .mobile-logout {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 @media (max-width: 100em) {
