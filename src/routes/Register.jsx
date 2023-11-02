@@ -1,5 +1,6 @@
 import "./register.css";
 import "./login.css";
+import "../mediaQueries.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
@@ -69,9 +70,7 @@ export default function Register() {
           >
             Sign up
           </button>
-          <span
-            style={{ position: "fixed", bottom: "25rem", fontSize: "1.4rem" }}
-          >
+          <span className="toggle-register-login-page">
             Already have an account? Log in&nbsp;
             <Link style={{ fontWeight: "600", color: "#333" }} to="/login">
               here

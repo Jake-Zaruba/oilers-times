@@ -64,6 +64,7 @@
     top: 12rem !important;
   }
   .login-input {
+    font-size: 1.8rem !important;
     width: 22rem !important;
   }
   .home-page-container {
@@ -233,5 +234,8 @@
     100% {
       transform: translatex(0rem) translateY(0rem) rotate(0deg);
     }
+  }
+  .toggle-register-login-page {
+    bottom: 5rem !important;
   }
 }

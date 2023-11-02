@@ -66,9 +66,7 @@ export default function Login() {
           <button className="article-button" onClick={(e) => handleLogin(e)}>
             Log in
           </button>
-          <span
-            style={{ position: "fixed", bottom: "25rem", fontSize: "1.4rem" }}
-          >
+          <span className="toggle-register-login-page">
             Don't have an account? Create one&nbsp;
             <Link style={{ fontWeight: "600", color: "#333" }} to="/register">
               here

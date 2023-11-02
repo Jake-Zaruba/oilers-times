@@ -67,3 +67,9 @@
   background-color: transparent;
   border: none;
 }
+
+.toggle-register-login-page {
+  position: fixed;
+  bottom: 25rem;
+  font-size: 1.4rem;
+}
