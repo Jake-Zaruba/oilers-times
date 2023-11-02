@@ -42,7 +42,7 @@ export default function Layout() {
             </div>
           </div>
 
-          <nav className={!menuOpen ? "closed-menu" : "open-menu"}>
+          <nav className={!menuOpen ? "closed-menu" : ""}>
             <NavLink
               className={({ isActive }) => {
                 isActive ? "active" : "";
