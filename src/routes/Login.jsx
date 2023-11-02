@@ -59,12 +59,9 @@ export default function Login() {
             onClick={() => setShowPassword((prev) => !prev)}
           >
             {!showPassword ? (
-              <img
-                className="password-icon"
-                src="../public/show-password.svg"
-              />
+              <img className="password-icon" src="/show-password.svg" />
             ) : (
-              <img src="../public/hide-password.svg" />
+              <img src="/hide-password.svg" />
             )}
           </button>
         </div>
