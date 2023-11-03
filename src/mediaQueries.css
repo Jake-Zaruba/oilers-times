@@ -43,11 +43,20 @@
   }
 }
 
-@media (max-width: 34em) {
-  /* *****544px***** */
+@media (max-width: 59em) {
+  /* *****944px***** */
   html {
     font-size: 50%;
   }
+  .oilers-times-article-container {
+    height: 60rem;
+    width: 48rem;
+  }
+}
+
+@media (max-width: 34em) {
+  /* *****544px***** */
+
   .login-page-container {
     height: 100%;
     width: 100%;
@@ -68,7 +77,7 @@
     width: 27rem !important;
   }
   .home-page-container {
-    background-position: -175rem;
+    background-position: -174rem;
   }
   .clocktower-flicker-animation,
   .building-flicker-animation,
@@ -237,5 +246,21 @@
   }
   .toggle-register-login-page {
     bottom: 5rem !important;
+  }
+  .article-header {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    font-size: 5.2rem !important;
+  }
+  .oilers-times-article-container {
+    height: 65vh;
+    width: 90vw;
+  }
+  .oilers-times-article-item {
+    flex-direction: column;
+  }
+  .article-page-body {
+    padding: 2rem 2rem;
+    line-height: 1.3;
   }
 }

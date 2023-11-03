@@ -27,36 +27,38 @@ export default function oilersTimesArticlePage() {
       body = doc.data().body;
       imageUrl = doc.data().map;
       date = doc.data().date;
-      {
-        console.log(doc.data());
-      }
     }
   });
 
   return (
     <div
       style={{
-        display: "flex",
-        background: `url(${imageUrl}) no-repeat center
-        fixed`,
-        backgroundSize: "cover",
-        height: "100vh",
-        width: "100vw",
+        minHeight: "140vh",
+        width: "100%",
+        background: "black",
       }}
     >
-      <div className="article-background-gradient">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <h1 className="article-page-title">{title}</h1>
-          <p style={{ color: "white" }}>{date}</p>
-        </div>
+      <div
+        style={{
+          background: `url(${imageUrl}) repeat center fixed`,
+          backgroundSize: "cover",
+        }}
+        className="article-container"
+      >
+        <div className="article-background-gradient">
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <h1 className="article-page-title">{title}</h1>
+            <p className="article-page-date">{date}</p>
+          </div>
 
-        <p className="article-page-body">{body}</p>
+          <p className="article-page-body">{body}</p>
+        </div>
       </div>
     </div>
   );

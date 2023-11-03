@@ -20,12 +20,6 @@
   border-radius: 1.2rem;
 }
 
-.oilers-times-header {
-  font-family: UnifrakturMaguntia, cursive;
-  font-size: 6rem;
-  width: 44rem;
-}
-
 .field-container {
   position: relative;
   display: flex;

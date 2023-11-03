@@ -7,12 +7,23 @@
   width: 100vw;
 }
 
-.oilters-times-article-container {
+.oilters-times-article-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-header {
+  margin-top: -7rem;
+  margin-bottom: 7rem;
+}
+
+.oilers-times-article-container {
   height: 48rem;
   width: 84rem;
   border: 3px solid #e5edff;
   border-radius: 2rem;
-  /* padding: 1rem; */
   overflow: scroll;
   animation: articleAnimation 0.8s ease-out forwards;
   z-index: 1;
@@ -110,15 +121,21 @@
   border-radius: 12px;
 }
 
+.article-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
 .article-background-gradient {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 94vh;
   width: 100vw;
-  background: linear-gradient(to bottom, transparent 10%, black 90%);
+  background: linear-gradient(to bottom, transparent 1%, black 60%);
 }
 
 .article-page-title {
@@ -127,17 +144,26 @@
   align-items: center;
   font-size: 3.2rem;
   color: white;
-  margin-top: 30rem;
+}
+
+.article-page-date {
+  color: white;
 }
 
 .article-page-body {
-  font-size: 1.6rem;
+  height: 90%;
+  font-size: 1.5rem;
+  font-weight: 500;
   color: white;
-  padding: 4rem 20rem;
+  padding: 2rem 10rem;
   white-space: pre-wrap;
 }
 
 .article-page-body::first-letter {
   initial-letter: 3;
   margin-right: 0.75rem;
+}
+
+.article-background-color {
+  background-color: black;
 }

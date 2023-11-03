@@ -91,3 +91,9 @@ nav {
   display: flex;
   gap: 5rem;
 }
+
+.oilers-times-header {
+  font-family: UnifrakturMaguntia, cursive;
+  font-size: 6rem;
+  width: 44rem;
+}
