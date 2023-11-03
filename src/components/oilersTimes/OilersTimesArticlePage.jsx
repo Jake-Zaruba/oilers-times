@@ -33,6 +33,10 @@ export default function oilersTimesArticlePage() {
 
   useEffect(() => {
     document.body.classList.add("black-background");
+
+    return () => {
+      document.body.classList.remove("black-background");
+    };
   }, []);
 
   return (
