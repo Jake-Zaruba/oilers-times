@@ -2,6 +2,7 @@ import "./oilersTimes.css";
 import { useLoaderData, useParams } from "react-router-dom";
 import { db } from "../../firebase";
 import { getDocs, collection } from "@firebase/firestore";
+import { useEffect } from "react";
 
 const articleCollectionRef = collection(db, "articles");
 export async function articlePageLoader() {
@@ -30,35 +31,31 @@ export default function oilersTimesArticlePage() {
     }
   });
 
+  useEffect(() => {
+    document.body.classList.add("black-background");
+  }, []);
+
   return (
     <div
       style={{
-        minHeight: "140vh",
-        width: "100%",
-        background: "black",
+        background: `url(${imageUrl}) repeat center fixed`,
+        backgroundSize: "cover",
       }}
+      className="article-container"
     >
-      <div
-        style={{
-          background: `url(${imageUrl}) repeat center fixed`,
-          backgroundSize: "cover",
-        }}
-        className="article-container"
-      >
-        <div className="article-background-gradient">
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <h1 className="article-page-title">{title}</h1>
-            <p className="article-page-date">{date}</p>
-          </div>
-
-          <p className="article-page-body">{body}</p>
+      <div className="article-background-gradient">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <h1 className="article-page-title">{title}</h1>
+          <p className="article-page-date">{date}</p>
         </div>
+
+        <p className="article-page-body">{body}</p>
       </div>
     </div>
   );

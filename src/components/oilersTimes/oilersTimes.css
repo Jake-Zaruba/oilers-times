@@ -164,6 +164,6 @@
   margin-right: 0.75rem;
 }
 
-.article-background-color {
-  background-color: black;
+.black-background {
+  background: black !important;
 }
