@@ -26,7 +26,6 @@
   flex-direction: column;
   align-items: space-around;
   justify-content: center;
-  margin-bottom: 2rem;
 }
 
 .login-field {
@@ -61,4 +60,8 @@
 
 .toggle-register-login-page {
   font-size: 1.4rem;
+}
+
+.login-button {
+  margin-top: -7rem;
 }

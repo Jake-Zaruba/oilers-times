@@ -54,6 +54,12 @@ export default function Login() {
             )}
           </button>
         </div>
+        <button
+          className="article-button login-button"
+          onClick={(e) => handleLogin(e)}
+        >
+          Log in
+        </button>
         <div
           style={{
             display: "flex",
@@ -63,9 +69,6 @@ export default function Login() {
             justifySelf: "flex-end",
           }}
         >
-          <button className="article-button" onClick={(e) => handleLogin(e)}>
-            Log in
-          </button>
           <span className="toggle-register-login-page">
             Don't have an account? Create one&nbsp;
             <Link style={{ fontWeight: "600", color: "#333" }} to="/register">

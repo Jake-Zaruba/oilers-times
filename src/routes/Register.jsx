@@ -55,6 +55,12 @@ export default function Register() {
             )}
           </button>
         </div>
+        <button
+          className="article-button login-button"
+          onClick={(e) => handleRegistration(e)}
+        >
+          Sign up
+        </button>
         <div
           style={{
             display: "flex",
@@ -64,12 +70,6 @@ export default function Register() {
             justifySelf: "flex-end",
           }}
         >
-          <button
-            className="article-button"
-            onClick={(e) => handleRegistration(e)}
-          >
-            Sign up
-          </button>
           <span className="toggle-register-login-page">
             Already have an account? Log in&nbsp;
             <Link style={{ fontWeight: "600", color: "#333" }} to="/login">

@@ -65,6 +65,9 @@
     height: 95vh !important;
     width: 95vw !important;
   }
+  .login-button {
+    margin-top: -20rem !important;
+  }
   .password-toggle-button {
     bottom: 0.35rem !important;
   }
