@@ -5,7 +5,7 @@ import { Context } from "../context/AuthContext";
 export function ProtectedRoute({ children }) {
   const { user } = useContext(Context);
   if (!user) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/login" replace={true} />;
   } else {
     return children;
   }
