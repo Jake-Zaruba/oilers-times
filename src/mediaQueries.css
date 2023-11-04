@@ -254,6 +254,9 @@
   .toggle-register-login-page {
     bottom: 5rem !important;
   }
+  .body-input {
+    font-size: 2rem;
+  }
   .article-header {
     margin-top: 2rem;
     margin-bottom: 4rem;
