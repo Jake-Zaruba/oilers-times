@@ -39,11 +39,7 @@ export default function OilersTimes() {
           </h2>
         )}
       </OilersTimesArticleContainer>
-      <Link
-        className="article-button"
-        style={!menuOpen ? {} : { opacity: "0%" }}
-        to="new-article"
-      >
+      <Link className="article-button" to="new-article">
         New Article
       </Link>
     </div>
