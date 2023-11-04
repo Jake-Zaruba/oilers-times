@@ -29,7 +29,6 @@ export default function oilersTimesAuthorPage() {
       date: new Date().toLocaleDateString(),
     };
     addDoc(store, data);
-    // console.log(mapData[20].name);
     navigate("/oilers-times");
   };
 
@@ -42,28 +41,7 @@ export default function oilersTimesAuthorPage() {
   });
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100vh",
-        width: "100vw",
-      }}
-    >
-      <h1
-        style={{
-          position: "absolute",
-          top: "10rem",
-          right: "calc(50% - 22rem)",
-          fontFamily: "UnifrakturMaguntia, cursive",
-          fontSize: "6rem",
-          width: "44rem",
-        }}
-      >
-        The Oilers Times
-      </h1>
+    <div className="author-page-container">
       <form className="oilers-times-form">
         <input
           className="title-input"

@@ -1,6 +1,6 @@
 import "./oilersTimes.css";
 import OilersTimesArticleContainer from "./OilersTimesArticleContainer";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useOutletContext } from "react-router-dom";
 import { db } from "../../firebase";
 import {
   getDocs,
@@ -26,6 +26,8 @@ export default function OilersTimes() {
     );
   });
 
+  const [menuOpen, setMenuOpen] = useOutletContext();
+
   return (
     <div className="oilers-times-page-container">
       <OilersTimesArticleContainer>
@@ -39,7 +41,7 @@ export default function OilersTimes() {
       </OilersTimesArticleContainer>
       <Link
         style={{ marginTop: "2rem" }}
-        className="article-button"
+        className={!menuOpen ? "article-button" : "disabled-homepage-button"}
         to="new-article"
       >
         New Article

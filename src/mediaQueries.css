@@ -52,6 +52,9 @@
     height: 60rem;
     width: 48rem;
   }
+  .body-input {
+    width: 95vw;
+  }
 }
 
 @media (max-width: 34em) {
@@ -103,7 +106,7 @@
     top: 30rem;
     align-items: center;
     gap: 2rem;
-    transition: all 0.3s;
+    /* transition: all 0.3s; */
   }
   .logout {
     display: none;
@@ -116,7 +119,7 @@
     width: 100vw; */
   }
   .closed-menu {
-    opacity: 0%;
+    /* opacity: 0%; */
     visibility: hidden;
     pointer-events: none;
   }
@@ -153,7 +156,7 @@
     border: 1px solid white;
     border-radius: 1.2rem;
     padding: 1rem;
-    transition: all 0.1s linear;
+    /* transition: all 0.1s linear; */
   }
 
   .mobile-nav-wrapper {

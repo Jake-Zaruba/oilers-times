@@ -25,30 +25,32 @@ export default function Layout() {
   return (
     <div>
       {!user ? null : (
-        <header className={!menuOpen ? "" : "open-menu"}>
-          <div
-            className="menu-button mobile-nav-wrapper"
-            onClick={(e) => handleMenuToggle(e)}
-            role="navigation"
-          >
-            <div className="btn-mobile-nav">
-              <div
-                className={
-                  !menuOpen
-                    ? "close-top-nav-line-animation top-nav-line"
-                    : "top-nav-line-animation top-nav-line"
-                }
-              ></div>
-              <div
-                className={
-                  !menuOpen
-                    ? "close-bottom-nav-line-animation bottom-nav-line"
-                    : "bottom-nav-line-animation bottom-nav-line"
-                }
-              ></div>
-            </div>
+        <div
+          className="menu-button mobile-nav-wrapper"
+          onClick={(e) => handleMenuToggle(e)}
+          role="navigation"
+        >
+          <div className="btn-mobile-nav">
+            <div
+              className={
+                !menuOpen
+                  ? "close-top-nav-line-animation top-nav-line"
+                  : "top-nav-line-animation top-nav-line"
+              }
+            ></div>
+            <div
+              className={
+                !menuOpen
+                  ? "close-bottom-nav-line-animation bottom-nav-line"
+                  : "bottom-nav-line-animation bottom-nav-line"
+              }
+            ></div>
           </div>
+        </div>
+      )}
 
+      {!user ? null : (
+        <header className={!menuOpen ? "closed-menu" : "open-menu"}>
           <nav
             className={!menuOpen ? "closed-menu" : ""}
             onClick={() => setMenuOpen((prev) => !prev)}
