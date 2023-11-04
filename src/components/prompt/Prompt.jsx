@@ -3,11 +3,11 @@ import "./prompt.css";
 export default function Prompt({
   handleTrueAnswer,
   handleFalseAnswer,
-  navigate,
+  children,
 }) {
   return (
     <div className="prompt-container">
-      <h2>Are you sure you want to delete this article?</h2>
+      <h2>{children}</h2>
       <div style={{ display: "flex", gap: "3rem" }}>
         <button
           onClick={() => handleFalseAnswer()}

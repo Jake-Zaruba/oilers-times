@@ -41,7 +41,9 @@ export default function OilersTimesArticleItem({ data, id }) {
           navigate={navigate}
           handleTrueAnswer={handleTrueAnswer}
           handleFalseAnswer={handleFalseAnswer}
-        />
+        >
+          Are you sure you want to delete this article?
+        </Prompt>
       ) : null}
       <Link className="article-button" to={`/${id}`}>
         Read

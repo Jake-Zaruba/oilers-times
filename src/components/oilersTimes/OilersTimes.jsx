@@ -41,7 +41,7 @@ export default function OilersTimes() {
       </OilersTimesArticleContainer>
       <Link
         className="article-button"
-        style={!menuOpen ? { marginTop: "2rem" } : { zIndex: "-1" }}
+        style={!menuOpen ? {} : { opacity: "0%" }}
         to="new-article"
       >
         New Article
