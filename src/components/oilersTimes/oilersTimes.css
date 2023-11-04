@@ -7,7 +7,7 @@
   width: 100vw;
 }
 
-.oilters-times-article-page-container {
+.oilers-times-article-page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,6 +17,7 @@
 .article-header {
   margin-top: -7rem;
   margin-bottom: 7rem;
+  justify-self: center;
 }
 
 .oilers-times-article-container {

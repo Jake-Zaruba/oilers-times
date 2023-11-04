@@ -1,7 +1,7 @@
 import "./oilersTimes.css";
 import { useOutletContext } from "react-router-dom";
 
-export default function OiltersTimesArticleContainer({ children }) {
+export default function OilersTimesArticleContainer({ children }) {
   const [menuOpen, setMenuOpen] = useOutletContext();
 
   return (
@@ -9,7 +9,7 @@ export default function OiltersTimesArticleContainer({ children }) {
       <div
         className={
           !menuOpen
-            ? "oilters-times-article-page-container"
+            ? "oilers-times-article-page-container"
             : "disabled-homepage-links"
         }
       >
