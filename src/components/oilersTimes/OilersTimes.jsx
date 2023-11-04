@@ -40,8 +40,8 @@ export default function OilersTimes() {
         )}
       </OilersTimesArticleContainer>
       <Link
-        style={{ marginTop: "2rem" }}
-        className={!menuOpen ? "article-button" : "disabled-homepage-button"}
+        className="article-button"
+        style={!menuOpen ? { marginTop: "2rem" } : { zIndex: "-1" }}
         to="new-article"
       >
         New Article

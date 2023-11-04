@@ -1,7 +1,7 @@
 import "./oilersTimes.css";
 import { db } from "../../firebase";
 import { addDoc, collection } from "@firebase/firestore";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 
 export async function mapLoader() {
@@ -29,6 +29,7 @@ export default function oilersTimesAuthorPage() {
       date: new Date().toLocaleDateString(),
     };
     addDoc(store, data);
+    localStorage.removeItem("draft");
     navigate("/oilers-times");
   };
 
@@ -39,6 +40,13 @@ export default function oilersTimesAuthorPage() {
       </option>
     );
   });
+
+  useEffect(() => {
+    const draft = JSON.parse(localStorage.getItem("draft"));
+    if (draft) {
+      setBodyText(draft);
+    }
+  }, []);
 
   return (
     <div className="author-page-container">
@@ -53,7 +61,10 @@ export default function oilersTimesAuthorPage() {
           className="body-input"
           placeholder="Details..."
           value={bodyText}
-          onChange={(e) => setBodyText(e.target.value)}
+          onChange={(e) => {
+            setBodyText(e.target.value);
+            localStorage.setItem("draft", JSON.stringify(e.target.value));
+          }}
         />
         <select
           value={backgroundMap}
