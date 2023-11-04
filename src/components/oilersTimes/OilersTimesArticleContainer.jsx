@@ -8,9 +8,9 @@ export default function OilersTimesArticleContainer({ children }) {
     <>
       <div
         className={
-          !menuOpen
-            ? "oilers-times-article-page-container"
-            : "disabled-homepage-links"
+          menuOpen
+            ? "disabled-homepage-links oilers-times-article-page-container"
+            : "oilers-times-article-page-container"
         }
       >
         <h1 className="oilers-times-header article-header">The Oilers Times</h1>

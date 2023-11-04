@@ -15,13 +15,20 @@ export default function Layout() {
     await signOut(auth);
   }
 
+  function handleMenuToggle(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
+    setMenuOpen((prev) => !prev);
+  }
+
   return (
     <div>
       {!user ? null : (
         <header className={!menuOpen ? "" : "open-menu"}>
           <div
             className="menu-button mobile-nav-wrapper"
-            onClick={() => setMenuOpen((prev) => !prev)}
+            onClick={(e) => handleMenuToggle(e)}
             role="navigation"
           >
             <div className="btn-mobile-nav">
