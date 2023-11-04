@@ -13,6 +13,7 @@ export default function Register() {
   const auth = getAuth();
 
   async function handleRegistration(e) {
+    e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password).then((user) =>
       navigate("/")
     );
@@ -23,37 +24,42 @@ export default function Register() {
       <div className="login-container">
         <h1 className="oilers-times-header">The Oilers Times</h1>
         <div className="field-container">
-          <label style={{ fontSize: "1.2rem", marginLeft: "0.6rem" }}>
-            Email
-          </label>
-          <input
-            className="login-input"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            type="text"
-            autoComplete="off"
-            style={{ marginBottom: "1rem" }}
-          />
-          <label style={{ fontSize: "1.2rem", marginLeft: "0.6rem" }}>
-            Password
-          </label>
-          <input
-            className="login-input password-input"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            type={!showPassword ? "password" : "text"}
-            autoComplete="new-password"
-          ></input>
-          <button
-            className="password-toggle-button"
-            onClick={() => setShowPassword((prev) => !prev)}
+          <form
+            className="field-container"
+            onSubmit={(e) => handleRegistration(e)}
           >
-            {!showPassword ? (
-              <img className="password-icon" src="/show-password.svg" />
-            ) : (
-              <img src="/hide-password.svg" />
-            )}
-          </button>
+            <label style={{ fontSize: "1.2rem", marginLeft: "0.6rem" }}>
+              Email
+            </label>
+            <input
+              className="login-input"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              autoComplete="off"
+              style={{ marginBottom: "1rem" }}
+            />
+            <label style={{ fontSize: "1.2rem", marginLeft: "0.6rem" }}>
+              Password
+            </label>
+            <input
+              className="login-input password-input"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              type={!showPassword ? "password" : "text"}
+              autoComplete="new-password"
+            ></input>
+            <button
+              className="password-toggle-button"
+              onClick={() => setShowPassword((prev) => !prev)}
+            >
+              {!showPassword ? (
+                <img className="password-icon" src="/show-password.svg" />
+              ) : (
+                <img src="/hide-password.svg" />
+              )}
+            </button>
+          </form>
         </div>
         <button
           className="article-button login-button"
