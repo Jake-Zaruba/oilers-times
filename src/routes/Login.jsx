@@ -37,7 +37,7 @@ export default function Login() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 type="text"
-                autoComplete="off"
+                // autoComplete="off"
                 style={{ marginBottom: "1rem" }}
               />
               <label style={{ fontSize: "1.2rem", marginLeft: "0.6rem" }}>
@@ -48,7 +48,7 @@ export default function Login() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 type={!showPassword ? "password" : "text"}
-                autoComplete="new-password"
+                // autoComplete="new-password"
               ></input>
               <button
                 className="password-toggle-button"

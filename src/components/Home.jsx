@@ -18,11 +18,7 @@ export default function Home() {
           <div className="ripple-animation-drop"></div>
           <div className="ripple-animation-drop"></div>
         </div>
-        <div
-          className={
-            !menuOpen ? "home-page-links-container" : "disabled-homepage-links"
-          }
-        >
+        <div className="home-page-links-container">
           <NavLink className="home-page-link" to="team-stats">
             TEAM STATS
           </NavLink>
