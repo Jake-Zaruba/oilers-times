@@ -27,6 +27,8 @@ import Login from "./routes/Login";
 import Register from "./routes/Register";
 import { AuthContext } from "./context/AuthContext";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
+import Username from "./components/Username";
+import Polls from "./routes/Polls";
 
 const JSXRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -79,6 +81,14 @@ const JSXRouter = createBrowserRouter(
       <Route
         element={
           <ProtectedRoute>
+            <Polls />
+          </ProtectedRoute>
+        }
+        path="/polls"
+      />
+      <Route
+        element={
+          <ProtectedRoute>
             <OilersTimes />
           </ProtectedRoute>
         }
@@ -103,6 +113,14 @@ const JSXRouter = createBrowserRouter(
         }
         path="oilers-times/new-article"
         loader={mapLoader}
+      />
+      <Route
+        element={
+          <ProtectedRoute>
+            <Username />
+          </ProtectedRoute>
+        }
+        path="set-username"
       />
     </Route>
   )

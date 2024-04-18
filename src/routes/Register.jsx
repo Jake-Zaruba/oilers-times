@@ -1,6 +1,7 @@
 import "./register.css";
 import "./login.css";
 import "../mediaQueries.css";
+import { addDoc, collection } from "@firebase/firestore";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
@@ -14,6 +15,7 @@ export default function Register() {
 
   async function handleRegistration(e) {
     e.preventDefault();
+    addDoc(store, data);
     createUserWithEmailAndPassword(auth, email, password).then((user) =>
       navigate("/")
     );

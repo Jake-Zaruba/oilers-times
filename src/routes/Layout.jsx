@@ -66,6 +66,7 @@ export default function Layout() {
             <NavLink to="/player-search">Search</NavLink>
             <NavLink to="/team-stats">Team Stats</NavLink>
             <NavLink to="/oilers-times">Oilers Times</NavLink>
+            <NavLink to="/set-username">Set username</NavLink>
           </nav>
           <button className="logout" onClick={() => handleSignout()}>
             Sign out
